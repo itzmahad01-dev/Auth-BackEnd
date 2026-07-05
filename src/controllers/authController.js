@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export const signup = async (req, res) => {
+ 
   const { username, email, password } = req.body;
 
   if (!username || !email || !password) {
@@ -25,6 +26,7 @@ export const signup = async (req, res) => {
       });
     }
 
+ 
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = await User.create({
@@ -105,3 +107,4 @@ export const login = async (req, res) => {
     });
   }
 };
+
