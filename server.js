@@ -17,8 +17,8 @@ const PORT = process.env.PORT || 5000
 
 await connectDb()
 
-// app.listen(PORT, () => {
-//   console.log(`http://localhost:${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`http://localhost:${PORT}`);
+}); 
 
 export default app
